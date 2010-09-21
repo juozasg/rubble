@@ -1,4 +1,3 @@
-require 'rack/lobster'
 require './rubble.rb'
 
 #\ -p 3000
