@@ -1,5 +1,6 @@
 require 'rack/test'
 require './rubble.rb'
+require 'pp'
 
 include Rack::Test::Methods
 
@@ -7,7 +8,7 @@ include Rack::Test::Methods
 
 describe "Rubble" do
   def app
-      @app ||= Rubble.new
+    @app ||= Rack::Builder.parse_file('config.ru')[0]
   end
 
   it "says 'Hello World'" do
